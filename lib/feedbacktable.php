@@ -15,7 +15,7 @@ class FeedbackTable extends Entity\DataManager
 
     public static function getMap()
     {
- 
+
         return [
 
                 new Entity\IntegerField('ID',
