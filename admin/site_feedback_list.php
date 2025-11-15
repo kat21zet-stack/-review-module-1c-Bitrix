@@ -6,9 +6,7 @@ use Site\Feedback\FeedbackTable;
 
 $APPLICATION->SetTitle("Отзывы о сайте");
 $result  = FeedbackTable::getList([
-
     'order' => ['DATE_CREATE' => 'DESC'],
-
 ]);
 ?>
 <table class="adm-list-table">

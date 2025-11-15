@@ -19,7 +19,7 @@ class SiteFeedback extends CModule
         $this->MODULE_VERSION = $arModuleVersion['VERSION'];
         $this->MODULE_VERSION_DATE = $arModuleVersion['VERSION_DATE'];
     }
-
+        
     public function DoInstall()
     {
         ModuleManager::registerModule($this->MODULE_ID);
