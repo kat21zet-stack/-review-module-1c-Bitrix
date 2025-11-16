@@ -1,8 +1,10 @@
 <?php
 
 require($_SERVER['DOCUMENT_ROOT']. '/bitrix/modules/main/include/prolog_admin.php');
+\Bitrix\Main\Loader::includeModule('sitefeedback');
 
 use Site\Feedback\FeedbackTable;
+
 
 $APPLICATION->SetTitle("Отзывы о сайте");
 $result  = FeedbackTable::getList([

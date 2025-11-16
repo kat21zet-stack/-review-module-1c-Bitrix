@@ -6,20 +6,23 @@ use Bitrix\Main\ModuleManager;
 
 class SiteFeedback extends CModule
 {
-    public $MODULE_ID ;
+    public $MODULE_ID = "sitefeedback";
     public $MODULE_NAME;
     public $MODULE_VERSION;
     public $MODULE_VERSION_DATE;
 
+    public $MODULE_DESCRIPTION;
+
     public function __construct()
     {
         include(__DIR__ ."/version.php");
-        $this->$MODULE_ID = "site.feedback";
         $this->MODULE_NAME = "Отзывы о сайте";
         $this->MODULE_VERSION = $arModuleVersion['VERSION'];
         $this->MODULE_VERSION_DATE = $arModuleVersion['VERSION_DATE'];
+        $this->MODULE_DESCRIPTION = "Модуль отызвов";
+
     }
-        
+
     public function DoInstall()
     {
         ModuleManager::registerModule($this->MODULE_ID);
@@ -36,7 +39,7 @@ class SiteFeedback extends CModule
     public function InstallDB()
     {
         $conn = Application::getConnection();
-        $sql = file_get_contents(__DIR__.'/db/install.sql');
+        $sql = file_get_contents(__DIR__.'\db\install.sql');
         $conn->executeSqlBatch($sql);
     }
 
