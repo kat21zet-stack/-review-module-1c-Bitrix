@@ -1,5 +1,7 @@
 <?php
 
+
+
 use Site\Feedback\FeedbackTable;
 
 class FeedbackFormComponent extends CBitrixComponent
